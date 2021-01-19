@@ -1,0 +1,131 @@
+// andi $7,$7,0x0
+00
+00
+e7
+30
+
+// lw $4,308($4)     # num
+34
+01
+e4
+8c
+
+// lw $5,312($5)     # sign
+38
+01
+e5
+8c
+
+// lw $6,348($6)     # original LED state
+5c
+01
+e6
+8c
+
+// andi $4,$4,0xF
+0f
+00
+84
+30
+
+// andi $5,$5,0x1
+01
+00
+a5
+30
+
+// blez $5,off
+03
+00
+a0
+18
+
+// sllv $5,$5,$4    # sign = sign << num
+04
+28
+85
+00
+
+// or $6,$6,$5
+25
+30
+c5
+00
+
+// j end
+14
+00
+10
+08
+
+// off:
+// ori $5,$7,0x3FF
+ff
+03
+e5
+34
+
+// addi $4,$4,0x1      # $4 = num + 1
+01
+00
+84
+20
+
+// sllv $5,$5,$4
+04
+28
+85
+00
+
+// andi $5,$5,0x3FF    # $5(10bit): high 9-num bit set to 1, low num+1 bit set to 0
+ff
+03
+a5
+30
+
+// addi $9,$7,0xb
+0b
+00
+e9
+20
+
+// subu $9,$9,$4       # $9 = 11 - (num+1)
+23
+48
+24
+01
+
+// ori $8,$7,0x3FF
+ff
+03
+e8
+34
+
+// srlv $8,$8,$9       # $8(10 bit): high 10-num bit set to 0, low num bit set to 1
+06
+40
+28
+01
+
+// or $5,$5,$8
+25
+28
+a8
+00
+
+// and $6,$6,$5
+24
+30
+c5
+00
+
+// end:
+// sw $6,348($7)
+5c
+01
+e6
+ac
+
+
+// 21 instructions
+// little endian

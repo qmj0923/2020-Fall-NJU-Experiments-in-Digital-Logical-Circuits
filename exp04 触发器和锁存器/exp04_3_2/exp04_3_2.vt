@@ -1,0 +1,65 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "09/21/2020 14:00:18"
+                                                                                
+// Verilog Test Bench template for design : exp04_3_2
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module exp04_3_2_vlg_tst();
+// constants                                           
+// general purpose registers
+// reg eachvec;
+// test vector input registers
+reg KEY;
+reg [2:0] SW;
+// wires                                               
+wire [1:0]LEDR;
+
+// assign statements (if any)                          
+exp04_3_2 i1 (
+// port map - connection between master ports and signals/registers   
+	.KEY(KEY),
+	.LEDR(LEDR),
+	.SW(SW)
+);
+initial
+begin
+	KEY = 0; SW = 4'b0;
+	# 300;
+	$stop;
+end
+
+always begin
+	#0.2 KEY = 1; #10; 
+	KEY = 0; #9.8;
+end                                                    
+
+always begin
+	#2 SW[2] = ~SW[2]; #23;
+end
+
+always begin
+	#3 SW[1] = ~SW[1];SW[0] = ~SW[0]; #12;
+end                                                   
+endmodule
+

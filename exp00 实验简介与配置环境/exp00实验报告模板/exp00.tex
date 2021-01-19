@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper,UTF8]{article}
+\usepackage{ctex} % Chinese support
+\usepackage{graphicx} % Insert images
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{listings} % Print source code
+\usepackage{color} % Color support
+\usepackage{booktabs} % Professional table support
+\usepackage{pdflscape} % Landscape pages support in PDF
+\usepackage{hyperref} % Hypertext links support for cross-referencing
+\usepackage{amsmath,mathtools}
+\usepackage{ulem} % strikethrough
+
+% Customize hyperref format (it's set to no special format here)
+\hypersetup{hidelinks}
+
+% Declare directories to search for graphics files for graphicx
+\graphicspath{{figures/}}
+
+% Define source code style for listings
+\lstdefinestyle{verilog-style}{
+	language=Verilog,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\bfseries\color[rgb]{0, 0, 1},
+	identifierstyle=\color[rgb]{0.5, 0.3, 0.1},
+	stringstyle=\color[rgb]{0.6, 0.1, 0.1},
+	commentstyle=\itshape\color[rgb]{0.05, 0.5, 0.05},
+	backgroundcolor=\color[gray]{0.95},
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\color[gray]{0.6},
+	breaklines=true
+}
+
+\newcommand{\reporttitle}[2]{
+  \LARGE\textsf{#1}\quad\underline{\makebox[12em]{#2}}
+}
+
+\newcommand{\reportinfo}[2]{
+  \large\makebox[4em]{\textsf{#1}}\quad\underline{\makebox[18em]{#2}}
+}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{\fill}
+  {\Huge\textsf{数字电路与数字系统实验}} \\ [100pt]
+  \reportinfo{实验名称}{} \\ [10pt]
+  \reportinfo{院系}{计算机科学与技术系} \\ [10pt]
+  \reportinfo{学生姓名}{} \\ [10pt]
+  \reportinfo{学号}{} \\ [10pt]
+  \reportinfo{班级}{数字电路与数字系统实验1班} \\ [10pt]
+  \reportinfo{邮箱}{} \\ [10pt]
+  \reportinfo{实验时间}{\today} \\ [10pt]
+  \vspace*{\fill}
+\end{titlepage}
+\tableofcontents
+\newpage
+
+\section{实验目的}
+
+
+\section{实验原理}
+
+
+\section{实验环境/器材}
+
+
+\section{程序代码或流程图}
+
+
+\section{实验步骤/过程}
+
+
+\section{测试方法}
+
+
+\section{实验结果}
+
+
+\section{遇到的问题及解决办法}
+
+
+\section{得到的启示}
+
+
+\section{意见和建议}
+
+
+\end{document}

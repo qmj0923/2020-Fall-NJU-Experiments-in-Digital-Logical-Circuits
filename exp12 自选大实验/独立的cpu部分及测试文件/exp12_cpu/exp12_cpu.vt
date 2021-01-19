@@ -1,0 +1,87 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "11/24/2020 15:47:28"
+                                                                                
+// Verilog Test Bench template for design : exp12_cpu
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 10 ps
+module exp12_cpu_vlg_tst();
+// constants                                           
+// general purpose registers
+// reg eachvec;
+// test vector input registers
+reg CLOCK_50;
+reg [3:0] KEY;
+// wires                                               
+wire cpu_en;
+wire cpu_finished;
+wire [9:0]  curr_PC;
+wire en_init;
+wire [31:0]  exec_res;
+wire [31:0]  inst_data;
+wire inst_finished;
+wire inst_re;
+wire [9:0]  mem_addr;
+wire [31:0]  mem_data;
+wire mem_r_finished;
+wire mem_re;
+wire mem_w_finished;
+wire mem_we;
+wire [31:0]  rt_data;
+
+// assign statements (if any)                          
+exp12_cpu i1 (
+// port map - connection between master ports and signals/registers   
+	.CLOCK_50(CLOCK_50),
+	.KEY(KEY),
+	.cpu_en(cpu_en),
+	.cpu_finished(cpu_finished),
+	.curr_PC(curr_PC),
+	.en_init(en_init),
+	.exec_res(exec_res),
+	.inst_data(inst_data),
+	.inst_finished(inst_finished),
+	.inst_re(inst_re),
+	.mem_addr(mem_addr),
+	.mem_data(mem_data),
+	.mem_r_finished(mem_r_finished),
+	.mem_re(mem_re),
+	.mem_w_finished(mem_w_finished),
+	.mem_we(mem_we),
+	.rt_data(rt_data)
+);
+initial
+begin
+   CLOCK_50 = 0;
+   KEY[0] = 1;
+   #500;
+   $stop;
+end
+
+always
+begin
+   #0.02 CLOCK_50 = 1; #0.5;
+   CLOCK_50 = 0; #0.48;
+end
+endmodule
+

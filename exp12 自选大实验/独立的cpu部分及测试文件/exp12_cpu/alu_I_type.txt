@@ -1,0 +1,74 @@
+// addiu $2, $2, 0x03
+03
+00
+42
+24
+
+// addi $2, $2, 0x04
+04
+00
+42
+20
+
+// andi $2, $2, 0x05
+05
+00
+42
+30
+
+// ori $2, $2, 0xA6
+A6
+00
+42
+34
+
+// xori $2, $2, 0x83
+83
+00
+42
+38
+
+// addi $3, $2, 0x05
+05
+00
+43
+20
+
+// addi $4, $4, 0xFFF2 (-0xe)
+F2
+FF
+84
+20 
+
+// addi $4, $4, 0xFFF2 (-0x9)
+F7
+FF
+84
+20 
+
+// slti $5, $2, 0x28
+28
+00
+45
+28
+
+// sltiu $6, $3, 0x28
+28
+00
+66
+2C
+
+// slti $7, $4, 0xFFF5 (-0xb)
+F5
+FF
+87
+28
+
+// 11 instructions
+
+/* need to be modified: 
+inst_ram.v->initial->readmemh->filename
+top-level module->cpu cpu1->PC_end
+*/
+
+// little endian

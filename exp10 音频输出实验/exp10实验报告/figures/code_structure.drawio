@@ -1,0 +1,111 @@
+<mxfile host="65bd71144e" modified="2020-11-01T08:48:50.519Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="xGZQMgfrWB87ju3HKuwv" version="13.6.5">
+    <diagram id="kb0GIiNW1m8-RtI3qJTJ" name="第 1 页">
+        <mxGraphModel dx="868" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.564;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;out_kbd.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;shadow=0;glass=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="270" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;ps2_keyboard.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="360" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;seg_7_out.v&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="30" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="4" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="38" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="60" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="14" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="430" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="14" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;sound_sample.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;shadow=0;glass=0;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="20" width="170" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;audio_clk.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="504" y="50" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;clkgen.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="504" y="20" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="I2S_Audio.v" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="504" y="80" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;I2C_Audio_Config.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;shadow=0;glass=0;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="140" width="170" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="21" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="21" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;sin_processing.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;shadow=0;glass=0;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="150" width="170" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;kbd_pressed.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="360" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;div class=&quot;O0&quot; style=&quot;margin-top: 0pt ; margin-bottom: 0pt ; margin-left: 0.38in ; text-indent: -0.38in&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Sin_Generator.v&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;shadow=0;glass=0;" parent="1" vertex="1">
+                    <mxGeometry x="434" y="230" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=none;strokeColor=#00FF00;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="10" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=none;strokeColor=#00FF00;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="130" width="210" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 153)&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;老师提供的文件（不需要改动）&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="30" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 153)&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;老师提供的文件（需要改动）&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="605" y="190" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=none;strokeColor=#00FF00;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="260" width="310" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 153)&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;自己编写的键盘接口&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="260" width="67" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;font color=&quot;#000000&quot; style=&quot;background-color: rgb(102 , 255 , 255)&quot;&gt;七段数码管显示音量&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="47.5" y="45" width="65" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font color=&quot;#000000&quot; style=&quot;background-color: rgb(102 , 255 , 255)&quot;&gt;调节音量&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="464" y="190" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;background-color: rgb(102 , 255 , 255)&quot;&gt;根据频率的递增量产生正弦值&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="459" y="270" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

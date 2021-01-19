@@ -1,0 +1,184 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "09/16/2020 00:10:42"
+                                                                                
+// Verilog Test Bench template for design : exp03_3_2
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 10 ns/ 1 ps
+module exp03_3_2_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [2:0] KEY;
+reg [7:0] SW;
+reg [3:0] out_y;
+// wires                                               
+wire [6:0] LEDR;
+// integers
+integer i, j, k, u_a, u_b, sum_ab, cf, of, zf;
+
+task check;
+	input [3:0] result;
+	input c, o, z;
+	begin
+	//$display("go in check");
+	if (result != LEDR[3:0]) begin
+		//$display("y1");
+		$display("Error:a=%h, b=%h, ctrl=%h, s should be %h,
+			get %h", SW[3:0], SW[7:4], KEY[2:0], result, LEDR[3:0]);
+	end
+	if (c != LEDR[4]) begin
+		$display("Error:a=%h, b=%h, ctrl=%h, cf should be %b,
+			get %b", SW[3:0], SW[7:4], KEY[2:0], c, LEDR[4]);
+	end
+	if (o != LEDR[5]) begin
+		$display("Error:a=%h, b=%h, ctrl=%h, of should be %b,
+			get %b", SW[3:0], SW[7:4], KEY[2:0], o, LEDR[5]);
+	end
+	if (z != LEDR[6]) begin
+		$display("Error:a=%h, b=%h, ctrl=%h, zf should be %b,
+			get %b", SW[3:0], SW[7:4], KEY[2:0], z, LEDR[6]);
+	end
+	end
+endtask
+
+
+// assign statements (if any)                          
+exp03_3_2 i1 (
+// port map - connection between master ports and signals/registers   
+	.KEY(KEY),
+	.LEDR(LEDR),
+	.SW(SW)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+
+for (i = -8; i <= 7; i = i+1)
+	for (j = -8; j <= 7; j = j+1)
+		for (k = 0; k <= 7; k = k+1) begin
+			SW[3:0] = i;
+			SW[7:4] = j;
+			KEY[2:0] = k;
+			u_a = i < 0 ? i + 16 : i;
+			u_b = j < 0 ? j + 16 : j;
+			sum_ab = (k == 0) ? (i+j) : (i-j);
+			cf = 0;
+			of = 0;
+			zf = 0;
+			
+			case (k)
+			3'd0: begin
+				if (sum_ab >= 8) begin
+					out_y = sum_ab - 16;
+					cf = 0;
+					of = 1;
+					zf = 0;
+				end
+				else if (sum_ab < -8) begin
+					out_y = sum_ab + 16;
+					cf = 1;
+					of = 1;
+					zf = (out_y == 0) ? 1 : 0;
+				end
+				else begin
+					out_y = sum_ab;
+					of = 0;
+					zf = (sum_ab == 0) ? 1 : 0;
+					if ((i*j>0 && i<0) || (i*j<0 && sum_ab>=0)) cf = 1;
+					else cf = 0; 
+				end
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd1: begin
+				cf = u_a < u_b ? 0 : 1;
+				if (sum_ab >= 8) begin
+					out_y = sum_ab - 16;
+					of = 1;
+					zf = 0;
+				end
+				else if (sum_ab < -8) begin
+					out_y = sum_ab + 16;
+					of = 1;
+					zf = (out_y == 0) ? 1 : 0;
+				end
+				else begin
+					out_y = sum_ab;
+					of = 0;
+					zf = (out_y == 0) ? 1 : 0; 
+				end
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd2: begin
+				out_y = ~SW[3:0];
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd3: begin
+				out_y = SW[3:0] & SW[7:4];
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd4: begin
+				out_y = SW[3:0] | SW[7:4];
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd5: begin
+				out_y = SW[3:0] ^ SW[7:4];
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd6: begin
+				out_y[3:1] = 3'b0;
+				out_y[0] = i > j;
+				#20 check(out_y, cf, of, zf);
+			end
+			
+			3'd7: begin
+				out_y[3:1] = 3'b0;
+				out_y[0] = i == j;
+				#20 check(out_y, cf, of, zf);
+			end
+			endcase
+		end
+			
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+//always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+//begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+//@eachvec;                                              
+// --> end                                             
+//end                                                    
+endmodule
+
